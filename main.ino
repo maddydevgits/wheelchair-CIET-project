@@ -38,15 +38,16 @@ void loop(void)
    float y=event.acceleration.y;
    float z=event.acceleration.z;
 
-   if((x>2 && x<9) && (y>-3 && y<1.5)) {
+   if((x>2 && x<11) && (y>-3 && y<1.5)) {
     Serial.println("LEFT");
     left();
-   } else if((x>-10 && x<-2) && (y>-2 && y<0)){
+   } else if((x>-10 && x<-2) && (y>-2 && y<2)){
+    right();
     Serial.println("RIGHT");
-   } else if((x>0 && x<3) && (y>3 && y<10)) {
+   } else if((x>-1 && x<3) && (y>3 && y<11)) {
     Serial.println("FRONT");
     forward();
-   } else if((x>0 && x<2) && (y>-9 && y<-3)) {
+   } else if((x>-2 && x<2) && (y>-10 && y<-3)) {
     Serial.println("BACK");
     back();
    } else {
